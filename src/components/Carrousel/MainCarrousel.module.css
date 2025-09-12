@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+.container {
+    @apply rounded-4xl overflow-hidden shadow-lg relative cursor-pointer hover:opacity-90;
+    width: 50rem;
+    height: 29rem;
+}
+
+.fullSize{
+    @apply absolute top-0 w-full h-full;
+}
+
+.info{
+    @apply px-7;
+background: linear-gradient(180deg,
+ rgba(0, 0, 0, 0) 0,
+ rgba(0, 0, 0, 0)30%,
+ rgba(0, 0, 0, 0.851) 70%,
+  rgba(0, 0, 0, 0.962) 100%);
+}
+
+
+
+.title {
+    @apply font-black text-3xl line-clamp-1 h-11;
+    font-family: 'Trade Winds', serif;
+}
