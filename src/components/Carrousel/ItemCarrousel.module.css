@@ -1,0 +1,31 @@
+
+.rank-1{
+    background: linear-gradient(  rgb(255, 255, 255), rgb(209, 177, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rank-2{
+    background: linear-gradient(  rgb(255, 255, 255), rgb(236, 236, 236), rgb(86, 86, 86));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rank-3{
+    background: linear-gradient(  rgb(255, 255, 255),#b76837 ,#542000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rank-4{
+    background: linear-gradient(  rgb(255, 255, 255), #B9F2FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rank-5{
+    background: linear-gradient(  rgb(255, 255, 255), #50C878);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ 
