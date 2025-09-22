@@ -2,6 +2,7 @@ import type { Dispatch, SetStateAction } from 'react';
 import type { TTrendingManga } from '../../types';
 import styles from './MainCarrousel.module.css';
 import clsx from 'clsx';
+import router from '../../router';
 
 type TMainCarrouselProps = {
   trendingManga: TTrendingManga;
@@ -11,8 +12,14 @@ type TMainCarrouselProps = {
 }
 
 export default function MainCarrousel({trendingManga, trendingMangas, setPosition}: TMainCarrouselProps) {
+  
+  const goToMangaPage = (id: string) => {
+    console.log("id", id);
+    router.navigate({pathname: `/library/${id}`})
+  }
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={() => goToMangaPage(trendingManga.uniqueName)}>
       <img className={styles.fullSize} src={trendingManga.cover} alt="carrousel-photo" />
       <div className={clsx(styles.fullSize, styles.info)}>
         <div className='absolute bottom-0 mb-8'>

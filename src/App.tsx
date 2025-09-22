@@ -1,15 +1,16 @@
+import { RouterProvider } from "react-router"
 import Footer from "./layout/Footer"
 import Header from "./layout/Header"
-import HomePage from "./pages/HomePage"
+import router from "./router"
 
 function App() {
 
   return (
     <>
 <Header />
-<div className="container mx-auto p-2 flex flex-col items-center">
-<HomePage />
-</div>
+
+<RouterProvider router={router} />
+
 <Footer />
     </>
   )

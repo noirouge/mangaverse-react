@@ -1,9 +1,8 @@
 import clsx from "clsx";
 import styles  from "./ItemCarrousel.module.css";
-import { StarIcon as FillStar } from "@heroicons/react/16/solid";
-import { StarIcon as EmptyStar } from "@heroicons/react/24/outline";
 import type { TTrendingManga } from "../../types";
 import type { Dispatch, SetStateAction } from "react";
+import StarsRate from "../StarsRate";
 
 type TItemCarrouselProps = {
     treedingManga: TTrendingManga
@@ -22,14 +21,7 @@ export default function ItemCarrousel({treedingManga, position, setPosition}:TIt
         <span className="font-black ">
           {treedingManga.title}
         </span>
-        <span className="flex">
-            {Array.from({length: 5}).map((_, index) => 
-            index < treedingManga.rate ? 
-            (<FillStar key={'star'+index} className="h-5 w-5 text-yellow-300" />): (<EmptyStar key={'star'+index} className="h-5 w-5 text-yellow-300" />)
-        )}
-
-
-        </span>
+        <StarsRate rate={treedingManga.rate} />
       </div>
       </div>
   )

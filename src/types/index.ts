@@ -1,7 +1,9 @@
 
 export type TStatus = "ongoing" | "canceled" | "finished" | "hiatus";
-export type TType = "manga" | "mawnha" | "manhua";
-export type TDemographics = "shonen" | "seinen" | "shojo" | "josei";
+export type TType = "manga" | "manhwa" | "manhua";
+export type TDemographics = "shounen" | "seinen" | "shoujo" | "josei";
+
+export type TTag = TType | TDemographics | TStatus;
 
 export type TGenre = {
   id: number;
@@ -21,6 +23,7 @@ export type TManga = {
   rate: number;
   portrait: string;
   cover: string;
+  date: Date;
 };
 
 export type TTrending = {
@@ -35,3 +38,19 @@ export type TTrendingManga = Omit<
   Omit<TTrending, "mangaId"> & {
     chapters: number;
   };
+
+  export type TContinueReading = {
+    mangaId: string;
+  }
+
+  export type TImages = {
+    number: number;
+    image: string;
+  }
+
+  export type TChapter = {
+    mangaId: TManga['id'];
+    number: number;
+    title?: string;
+    images: TImages[];
+  }
