@@ -19,7 +19,8 @@ export default function MainCarrousel({trendingManga, trendingMangas, setPositio
   }
 
   return (
-    <div className={styles.container} onClick={() => goToMangaPage(trendingManga.uniqueName)}>
+    <div className={styles.container}>  
+     <div  onClick={() => goToMangaPage(trendingManga.uniqueName)}>
       <img className={styles.fullSize} src={trendingManga.cover} alt="carrousel-photo" />
       <div className={clsx(styles.fullSize, styles.info)}>
         <div className='absolute bottom-0 mb-8'>
@@ -30,7 +31,8 @@ export default function MainCarrousel({trendingManga, trendingMangas, setPositio
 </p>
             </div>
         </div>
-        <div className='absolute bottom-0 space-x-2 w-full flex justify-center items-center mb-1'>
+     </div>
+        <div className='absolute bottom-0 space-x-2 w-full flex justify-center items-center mb-1 z-10'>
           {trendingMangas.map(manga => (
             <div key={manga.position} onClick={() => setPosition(manga.position)} className={`h-3 w-3 border rounded-full hover:w-4 hover:h-4 z-10 ${manga.position === trendingManga.position&& 'bg-white'}`}></div>
             

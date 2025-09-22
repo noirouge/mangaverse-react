@@ -4,10 +4,7 @@ import useLibrary from "@/hooks/useLibrary";
 
 export default function LibraryPage() {
 
-  const {libraryMangas, goToMangaPage, pages, currentPage} = useLibrary();
-console.log("libraryMangas", libraryMangas);
-
-
+  const {libraryMangas, goToMangaPage, pages, currentPage, setPageNumber} = useLibrary();
 
   return (
 <div className="container mx-auto p-2 flex flex-col">
@@ -21,7 +18,7 @@ console.log("libraryMangas", libraryMangas);
   </div>
   {/*---------------------------PAGINATION---------------------------*/}
   <div>
-<Pagination pages={pages} currentPage={currentPage} />
+<Pagination pages={pages} currentPage={currentPage} setPageNumber={setPageNumber} />
   </div>
     </div>
   )
