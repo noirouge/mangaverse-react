@@ -1,3 +1,4 @@
 # React + TypeScript + Vite
+# THIS PROJECT IS STILL INCOMPLETE AND THE DEVELOPING IS IN HIATUS
 
 # PREVIEW CANCELED OLD VERSION MADE IN VUE: https://glittering-cupcake-8441ae.netlify.app/
